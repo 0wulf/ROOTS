@@ -44,6 +44,7 @@ router.get('', '/', async (ctx) => {
             },
           ]
         },
+      ];
     };
     ctx.status = 200;
   } catch (error) {
