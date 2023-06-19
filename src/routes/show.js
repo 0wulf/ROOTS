@@ -13,7 +13,7 @@ router.get('show', '/:userId/:unitId', async (ctx) => {
       total += declaration.value;
     });
     ctx.body = { 
-      result: Math.round(total * unit.ponderator * 1000) / 1000,
+      result: Math.round(total * unit.ponderator * 10000) / 10000,
       symbol: unit.symbol,
       description: unit.description,
     };
