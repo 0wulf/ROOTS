@@ -20,13 +20,40 @@ router.get('', '/', async (ctx) => {
             {
               name: 'unitId',
               description: 'Id de la unidad a la que queremos traducir el impacto',
+              units: [
+                {
+                  id: 1,
+                  description: 'Masa de residuos orgánicos generada',
+                  symbol: 'kg RROO',
+                },
+                {
+                  id: 2,
+                  descrpition: 'Masa de compost generada',
+                  symbol: 'kg COMPOST',
+                },
+                {
+                  id: 3,
+                  description: 'Potencial volumen de agua ahorrado por el uso del compost generado',
+                  symbol: 'l H2O',
+                },
+                {
+                  id: 4,
+                  description: 'Potencial volumen de agua ahorrado por el uso del compost generado',
+                  symbol: 'BIDONES DE 20 l de H2O',
+                },
+                {
+                  id: 5,
+                  description: 'Disminución de la huella de carbono',
+                  symbol: 'kg CO2'
+                },
+              ],
             }
           ]
         },
         {
           uri: '/declare',
           description: 'Declara el impacto de un usuario',
-          curl: 'curl -d "userId=<userId>[&days=<days>][&people=<people>]" https://roots-api.onrender.com/declare',
+          curl: "curl -d 'userId=<userId>[&days=<days>][&people=<people>]' https://roots-api.onrender.com/declare",
           params: [
             {
               name: 'userId',
